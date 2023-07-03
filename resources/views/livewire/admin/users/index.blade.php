@@ -126,7 +126,7 @@ use Carbon\Carbon;
                                         <td class="pe-0">
                                             <div class="d-flex align-items-center justify-content-end">
                                                 {{-- button delete --}}
-                                                @if (auth()->user()->role_id == 1 || auth()->user()->role_id == 2)
+
                                                 <button wire:click="changeStatus({{ $data->id }})"
                                                     class="btn btn-sm btn-{{ $data->status == 'Active' ? 'success' : 'info' }} er fs-6 px-8 py-4">
                                                     <i
@@ -139,6 +139,7 @@ use Carbon\Carbon;
                                                     <i class="fa-solid fa-trash-can"></i> Delete
                                                 </button>
                                                 &nbsp;
+                                                @if (auth()->user()->role_id == 1)
                                                 <button wire:click="impersonate({{ $data->id }})"
                                                     class="btn btn-primary er fs-6 px-8 py-4">
                                                     <i class="fa-solid fa-right-to-bracket"></i>Login Sebagai ..

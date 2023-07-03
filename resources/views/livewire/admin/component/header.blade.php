@@ -31,7 +31,7 @@
             <!--begin::Title-->
             <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center me-3 my-0">
                 <div class="d-flex">
-                    <a href="{{ route('home') }}" class="btn btn-danger d-flex flex-center flex-shrink-0 ms-4 h-40px"><i class="bi bi-globe text-blue"></i> Go to Website</a>
+                    <a target="_blank" href="{{ route('home') }}" class="btn btn-danger d-flex flex-center flex-shrink-0 ms-4 h-40px"><i class="bi bi-globe text-blue"></i> Go to Website</a>
                 </div>
             </h1>
             <!--end::Title-->
