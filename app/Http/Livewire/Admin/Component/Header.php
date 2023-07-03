@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Component;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Header extends Component
@@ -11,5 +12,12 @@ class Header extends Component
     {
         $this->user = auth()->user();
         return view('livewire.admin.component.header');
+    }
+
+    // leave impersonate
+    public function leaveImpersonate()
+    {
+        Auth::user()->leaveImpersonation();
+        return redirect()->route('dashboard');
     }
 }

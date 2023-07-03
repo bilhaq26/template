@@ -248,7 +248,12 @@
                             </div>
                             <!--end::Menu-->
                         </div>
-                        <!--end::Menu item-->
+                        @if (session('impersonated_by'))
+                        <div class="menu-item px-5">
+                            <a href="#" wire:click="leaveImpersonate()"
+                                class="menu-link px-5">Leave Impersonate</a>
+                        </div>
+                        @endif
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <a href="{{ route('logout') }}"

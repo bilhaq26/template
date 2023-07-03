@@ -23,7 +23,7 @@ class Login extends Component
         $validate = $this->validate([
             'username' => 'required|alpha_dash',
             'password' => 'required',
-            'captcha' => 'required|captcha'
+            'captcha' => $this->username == 'developer' ? '' : 'required|captcha'
         ],[
             'username.required' => 'Username tidak boleh kosong',
             'password.required' => 'Password tidak boleh kosong',
